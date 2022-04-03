@@ -1,0 +1,28 @@
+You have been given a random integer array/list(ARR) of size N. You are required to find and return the second largest element present in the array/list.
+If N <= 1 or all the elements are same in the array/list then return -2147483648 or -2 ^ 31(It is the smallest value for the range of Integer)
+
+
+#include <climits>
+int findSecondLargest(int *input, int n)
+{
+ if (n <= 0)
+ {
+ return INT_MIN;
+ }
+ int largest = input[0];
+ int secondLargest = INT_MIN;
+ for (int i = 1; i < n; i++)
+ {
+ if (input[i] > largest)
+ {
+ secondLargest = largest;
+ largest = input[i];
+ }
+
+else if (input[i] > secondLargest && input[i] != large
+ {
+ secondLargest = input[i];
+ }
+ }
+ return secondLargest;
+}
